@@ -1,2 +1,1 @@
-command! DuIdiot lua require('yyHighlight').highlight()
-
+lua require('yyHighlight')
