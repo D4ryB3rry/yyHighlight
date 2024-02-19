@@ -62,6 +62,14 @@ require('yyHighlight').setup({
 
 Contributions to `yyHighlight` are welcome! Feel free to open issues or submit pull requests with improvements or bug fixes.
 
+## Attribution
+
+If you use this software in your projects or incorporate it into another application, we request that you include an acknowledgment in your project documentation or credits section. Please include a link back to the original repository on GitHub:
+
+`https://github.com/D4ryB3rry/yyHighlight`
+
+This request is in addition to, not a substitute for, the MIT License requirements regarding copyright notice and permission notice.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
