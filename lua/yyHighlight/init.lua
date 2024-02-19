@@ -12,7 +12,6 @@ function M.setup(user_config)
     M.config = vim.tbl_extend("force", M.config, user_config)
 end
 
-
 M.highlight = function()
     local startPos = vim.api.nvim_buf_get_mark(0, "[")
     local endPos = vim.api.nvim_buf_get_mark(0, "]")
@@ -24,10 +23,18 @@ M.highlight = function()
     local ns_id = vim.api.nvim_create_namespace('yyHighlight')
     local buf = vim.api.nvim_get_current_buf()
 
-    local startLine, startCol = startPos[1] - 1, 0
-    local endLine = endPos[1] - 1
-    local endLineText = vim.api.nvim_buf_get_lines(buf, endLine, endLine + 1, false)[1] or ""
-    local endCol = #endLineText
+    -- Adjust startCol and endCol to use the actual column positions
+    local startLine, startCol = startPos[1] - 1, startPos[2]
+    local endLine, endCol = endPos[1] - 1, endPos[2]
+
+    -- Fetch the text of the end line to ensure end_col is within range and adjust for inclusive highlighting
+    local endLineText = vim.api.nvim_buf_get_lines(buf, endLine, endLine + 1, false)[1]
+    -- Increase endCol by 1 to make highlighting inclusive of the last character
+    endCol = endCol + 1
+    -- Ensure endCol does not exceed the length of the line
+    if endCol > #endLineText then
+        endCol = #endLineText
+    end
 
     vim.api.nvim_buf_set_extmark(buf, ns_id, startLine, startCol, {
         end_line = endLine,
@@ -40,6 +47,7 @@ M.highlight = function()
         vim.api.nvim_buf_clear_namespace(buf, ns_id, 0, -1)
     end, M.config.highlight_duration)
 end
+
 
 
 -- Setup auto-command for TextYankPost
