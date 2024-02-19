@@ -30,7 +30,7 @@ M.highlight = function()
     -- Fetch the text of the end line to ensure end_col is within range
     local endLineText = vim.api.nvim_buf_get_lines(buf, endLine, endLine + 1, false)[1]
     if endCol >= #endLineText then
-        endCol = #endLineText - 1
+        endCol = #endLineText
     end
 
     -- Lua indexes from 1, Vim's API indexes from 0 for columns, adjust for zero-index
