@@ -21,11 +21,9 @@ To install `yyHighlight` with `lazy.nvim`, add the following to your Neovim conf
 
 ```lua
 require("lazy").setup({
-  {"username/yyHighlight", lazy = false},
+  {"D4ryB3rry/yyHighlight", lazy = false},
 })
 ```
-
-Replace `username/yyHighlight` with the actual GitHub username and repository if you're hosting it on GitHub, or adjust the path accordingly if it's hosted elsewhere.
 
 ### Manual Installation
 
