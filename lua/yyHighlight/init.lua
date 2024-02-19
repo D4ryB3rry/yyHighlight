@@ -27,8 +27,13 @@ M.highlight = function()
     local startLine, startCol = startPos[1] - 1, startPos[2]
     local endLine, endCol = endPos[1] - 1, endPos[2]
 
-    -- Correct endCol for zero-index and to include the last character
-    -- Lua indexes from 1, but Vim's API indexes from 0 for columns
+    -- Fetch the text of the end line to ensure end_col is within range
+    local endLineText = vim.api.nvim_buf_get_lines(buf, endLine, endLine + 1, false)[1]
+    if endCol >= #endLineText then
+        endCol = #endLineText - 1
+    end
+
+    -- Lua indexes from 1, Vim's API indexes from 0 for columns, adjust for zero-index
     if endCol > 0 then
         endCol = endCol - 1
     end
