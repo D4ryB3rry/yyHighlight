@@ -35,7 +35,7 @@ M.highlight = function()
 
     -- Lua indexes from 1, Vim's API indexes from 0 for columns, adjust for zero-index
     if endCol > 0 then
-        endCol = endCol - 1
+        endCol = endCol
     end
 
     vim.api.nvim_buf_set_extmark(buf, ns_id, startLine, startCol, {
