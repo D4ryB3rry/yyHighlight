@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-
-## Attribution
-
-If you use this software in your projects or incorporate it into another application, we request that you include an acknowledgment in your project documentation or credits section. Please include a link back to the original repository on GitHub:
-
-`https://github.com/D4ryB3rry/yyHighlight`
-
-This request is in addition to, not a substitute for, the MIT License requirements regarding copyright notice and permission notice.
