@@ -35,9 +35,9 @@ After installing the plugin, you can configure it by calling the `setup` functio
 
 ```lua
 require('yyHighlight').setup({
-    highlight_group = "MyHighlight",  -- Highlight group name
-    highlight_color = "Green",        -- Highlight color
-    highlight_duration = 5000         -- Highlight duration in milliseconds
+    highlight_group = "yyHighlight",  -- Highlight group name
+    highlight_color = "#4c4e90",        -- Highlight color
+    highlight_duration = 250 -- Highlight duration in milliseconds
 })
 ```
 
