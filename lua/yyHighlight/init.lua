@@ -3,7 +3,7 @@ local M = {}
 -- Default configuration
 M.config = {
     highlight_group = "yyHightlight", -- Default highlight group name
-    highlight_color = "#1d23fb",       -- Default highlight color
+    highlight_color = "#4c4e90",       -- Default highlight color
     highlight_duration = 250        -- Default highlight duration in milliseconds (.25 seconds)
 }
 
